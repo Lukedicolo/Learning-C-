@@ -8,12 +8,12 @@ namespace Inheritance
 
         public Publication(string name, int pagecount, decimal price) {
            _name = name;
-           PageCount = pagecount;
+           Pagecount = pagecount;
            Price = price;
         }
 
         // The PageCount property has no backing field
-        public int PageCount {
+        public int Pagecount {
             get; set;
         }
 
@@ -36,6 +36,8 @@ namespace Inheritance
 
         // TODO: use the "virtual" keyword to indicate that a method
         // can be overridden by subclasses to customize behavior
-
+        public virtual string GetDescription(){
+            return $"{Name}, {Pagecount} pages.";
+        }
     }
 }
