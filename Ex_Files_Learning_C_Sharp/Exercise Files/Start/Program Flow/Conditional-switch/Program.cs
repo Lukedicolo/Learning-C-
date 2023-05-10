@@ -1,0 +1,32 @@
+﻿using System;
+
+namespace ConditionalOps
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int theVal = 50;
+
+            // TODO: The switch statement
+            // With lots of decisions, if-else are hard to read, so use switch instead.
+            switch (theVal) {
+            case 50:
+                Console.WriteLine("theVal is 50.");
+                break;
+            case 51:
+                Console.WriteLine("theVal is 51.");
+                break;
+            // Handle multiple cases before code execution...
+            case 52:
+            case 53:
+            case 54:
+                Console.WriteLine("theVal is between 52 and 54.");
+                break;
+            default: // if no cases are met:
+                Console.WriteLine("theVal is something else...");
+                break;
+            }
+        }
+    }
+}
