@@ -40,6 +40,7 @@ namespace ProgChallenge
             if (_balance >= 5000.0m) {
                 _interest = 0.045m;
             }
+            Console.WriteLine($"Your current balance means you will receive an interest rate of {_interest*100:F1}%");
             _balance += Math.Round(_balance * _interest, 2);
         }
 

@@ -62,6 +62,20 @@ namespace ProgChallenge
             // Expected output should be -385 and 988.63
             Console.WriteLine($"Checking balance is £{checking.Balance:C2}");
             Console.WriteLine($"Savings balance is £{saving.Balance:C2}");
+
+            // Check that functionality to change interest rates works..
+            saving.Deposit(1000.0m);
+            Console.WriteLine($"Savings account balance: £{saving.Balance:C2}");
+
+            saving.ApplyInterest();
+            Console.WriteLine($"Savings account balance: £{saving.Balance:C2}");
+
+            saving.Deposit(4000.0m);
+            Console.WriteLine($"Savings account balance: £{saving.Balance:C2}");
+            saving.ApplyInterest();
+            Console.WriteLine($"Savings account balance: £{saving.Balance:C2}");
+
+
         }
     }
 }
